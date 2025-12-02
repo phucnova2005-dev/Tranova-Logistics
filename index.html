@@ -6,6 +6,7 @@
     <title>Tranova Warehouse | Logistics Da Nang</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>.lang-vi { display: none; }</style>
 </head>
 <body>
     <header></header> <!-- Tự động nạp bởi JS -->
@@ -13,11 +14,24 @@
     <!-- HERO BANNER -->
     <section class="hero-section">
         <div class="container hero-content">
-            <h1>The Gateway to<br><span style="color: var(--accent-gold);">Central Vietnam Logistics</span></h1>
-            <p>Optimizing Supply Chains with Technology-Driven Warehousing & Fulfillment Solutions in Da Nang.</p>
-            <div>
-                <a href="pages/services.html" class="btn">Our Services</a>
-                <a href="pages/contact.html" class="btn btn-outline" style="margin-left: 10px;">Contact Us</a>
+            <!-- Tiếng Anh -->
+            <div class="lang-en">
+                <h1>The Gateway to<br><span style="color: var(--accent-gold);">Central Vietnam Logistics</span></h1>
+                <p>Optimizing Supply Chains with Technology-Driven Warehousing & Fulfillment Solutions in Da Nang.</p>
+                <div>
+                    <a href="pages/services.html" class="btn">Our Services</a>
+                    <a href="pages/contact.html" class="btn btn-outline" style="margin-left: 10px;">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Tiếng Việt -->
+            <div class="lang-vi">
+                <h1>Cửa Ngõ Logistics<br><span style="color: var(--accent-gold);">Miền Trung Việt Nam</span></h1>
+                <p>Tối ưu hóa chuỗi cung ứng với giải pháp Kho bãi & Hoàn tất đơn hàng dựa trên công nghệ tại Đà Nẵng.</p>
+                <div>
+                    <a href="pages/services.html" class="btn">Dịch Vụ</a>
+                    <a href="pages/contact.html" class="btn btn-outline" style="margin-left: 10px;">Liên Hệ</a>
+                </div>
             </div>
         </div>
     </section>
@@ -25,30 +39,70 @@
     <!-- INTRO -->
     <section class="section-padding">
         <div class="container text-center">
-            <h2 class="mb-4" style="color: var(--dark-blue);">Why Choose Tranova?</h2>
-            <p style="max-width: 800px; margin: 0 auto; color: #555;">
+            <!-- Tiêu đề -->
+            <h2 class="mb-4 lang-en" style="color: var(--dark-blue);">Why Choose Tranova?</h2>
+            <h2 class="mb-4 lang-vi" style="color: var(--dark-blue);">Tại Sao Chọn Tranova?</h2>
+            
+            <!-- Mô tả -->
+            <p class="lang-en" style="max-width: 800px; margin: 0 auto; color: #555;">
                 Tranova Warehouse is a dynamic logistics startup positioned strategically in Da Nang. 
                 Whether you are an E-commerce seller needing fast fulfillment or an enterprise requiring secure bulk storage, 
                 Tranova provides scalable, secure, and cost-effective solutions.
             </p>
+            <p class="lang-vi" style="max-width: 800px; margin: 0 auto; color: #555;">
+                Tranova Warehouse là đơn vị logistics năng động có vị trí chiến lược tại Đà Nẵng. 
+                Dù bạn là nhà bán lẻ TMĐT cần xử lý đơn hàng nhanh chóng hay doanh nghiệp lớn cần kho lưu trữ an toàn, 
+                Tranova cung cấp các giải pháp mở rộng linh hoạt, bảo mật và tối ưu chi phí.
+            </p>
             
+            <!-- Grid Dịch Vụ -->
             <div class="services-grid" style="margin-top: 50px;">
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-warehouse"></i></div>
-                    <h3>Smart Storage</h3>
-                    <p>WMS-enabled warehousing ensuring 99.9% inventory accuracy.</p>
+                    
+                    <h3 class="lang-en">Smart Storage</h3>
+                    <h3 class="lang-vi">Kho Thông Minh</h3>
+                    
+                    <p class="lang-en">WMS-enabled warehousing ensuring 99.9% inventory accuracy.</p>
+                    <p class="lang-vi">Kho vận hành bằng hệ thống WMS đảm bảo độ chính xác tồn kho 99.9%.</p>
                 </div>
+
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-snowflake"></i></div>
-                    <h3>Cold Chain</h3>
-                    <p>Temperature controlled storage for Food & Pharma (18°C - 25°C).</p>
+                    
+                    <h3 class="lang-en">Cold Chain</h3>
+                    <h3 class="lang-vi">Kho Lạnh & Mát</h3>
+                    
+                    <p class="lang-en">Temperature controlled storage for Food & Pharma (18°C - 25°C).</p>
+                    <p class="lang-vi">Kho kiểm soát nhiệt độ (18°C - 25°C) dành cho Thực phẩm & Dược phẩm.</p>
                 </div>
+
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-truck-fast"></i></div>
-                    <h3>Fast Delivery</h3>
-                    <p>Same-day delivery within Da Nang and 24h to neighboring provinces.</p>
+                    
+                    <h3 class="lang-en">Fast Delivery</h3>
+                    <h3 class="lang-vi">Giao Hàng Nhanh</h3>
+                    
+                    <p class="lang-en">Same-day delivery within Da Nang and 24h to neighboring provinces.</p>
+                    <p class="lang-vi">Giao hàng trong ngày tại nội thành Đà Nẵng và 24h đi các tỉnh lân cận.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION (Mới thêm cho đẹp) -->
+    <section class="section-padding" style="background-color: #f9f9f9; text-align: center;">
+        <div class="container">
+            <h2 class="lang-en mb-3">Ready to scale your business?</h2>
+            <h2 class="lang-vi mb-3">Sẵn sàng mở rộng kinh doanh?</h2>
+            
+            <p class="lang-en mb-4">Get a free quote tailored to your logistics needs today.</p>
+            <p class="lang-vi mb-4">Nhận báo giá miễn phí phù hợp với nhu cầu logistics của bạn ngay hôm nay.</p>
+            
+            <a href="pages/contact.html" class="btn">
+                <span class="lang-en">Contact Us Now</span>
+                <span class="lang-vi">Liên Hệ Ngay</span>
+            </a>
         </div>
     </section>
 
