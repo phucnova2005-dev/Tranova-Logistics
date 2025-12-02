@@ -1,0 +1,321 @@
+/* --- 1. VARIABLES & RESET --- */
+:root {
+    /* Brand Colors */
+    --primary-light: #e3f2fd;  /* Nền sáng */
+    --dark-blue: #0d1b2a;      /* Xanh đen (Header/Footer/Text) */
+    --accent-gold: #f9a825;    /* Vàng kim (Button/Highlight) */
+    --white: #ffffff;
+    --text-gray: #666;
+    --border-color: #ddd;
+    
+    /* Spacing & Layout */
+    --container-width: 1200px;
+    --header-height: 80px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    line-height: 1.6;
+    padding-top: var(--header-height); /* Tránh nội dung bị Header che */
+}
+
+a { text-decoration: none; color: inherit; transition: var(--transition); }
+ul { list-style: none; }
+img { max-width: 100%; height: auto; }
+
+/* --- 2. UTILITY CLASSES --- */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding { padding: 60px 0; }
+.text-center { text-align: center; }
+.mb-4 { margin-bottom: 1.5rem; }
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid var(--accent-gold);
+    background: var(--accent-gold);
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(249, 168, 37, 0.3);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--accent-gold);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--dark-blue);
+}
+
+/* --- 3. HEADER & MEGA MENU --- */
+header {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Navigation */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--white);
+    position: relative;
+    padding: 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-gold);
+}
+
+/* Dropdown Menu */
+.has-dropdown { position: relative; }
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    color: var(--dark-blue);
+    width: 240px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    border-top: 3px solid var(--accent-gold);
+    border-radius: 0 0 5px 5px;
+}
+
+.has-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown li a {
+    display: block;
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.dropdown li a:hover {
+    background: var(--primary-light);
+    color: var(--dark-blue);
+    padding-left: 25px;
+}
+
+/* --- 4. HERO SECTION --- */
+.hero-section {
+    background: linear-gradient(rgba(13, 27, 42, 0.85), rgba(13, 27, 42, 0.7)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1470&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ddd;
+}
+
+/* Page Header (For sub-pages) */
+.page-header {
+    background: var(--dark-blue);
+    padding: 60px 0;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 40px;
+}
+
+/* --- 5. SERVICES GRID --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--white);
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-color: var(--accent-gold);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+/* --- 6. PRICING STYLES --- */
+.pricing-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 10px 25px;
+    background: transparent;
+    border: 2px solid var(--dark-blue);
+    color: var(--dark-blue);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: var(--transition);
+}
+
+.tab-btn.active {
+    background: var(--dark-blue);
+    color: var(--white);
+}
+
+.pricing-section { display: none; }
+.pricing-section.active { display: block; animation: fadeIn 0.5s ease; }
+
+.price-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+}
+
+.price-card.featured {
+    border: 2px solid var(--accent-gold);
+    background: linear-gradient(to bottom right, #fff, #fffbf0);
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin: 15px 0;
+}
+
+.price span { font-size: 1rem; color: var(--text-gray); font-weight: 400; }
+
+.features-list { text-align: left; margin: 20px 0; }
+.features-list li { margin-bottom: 10px; color: var(--text-gray); }
+.features-list li i { color: var(--accent-gold); margin-right: 10px; }
+
+/* --- 7. FOOTER --- */
+footer {
+    background-color: var(--dark-blue);
+    color: #ccc;
+    padding: 60px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 { color: var(--accent-gold); margin-bottom: 20px; }
+.footer-col a:hover { color: var(--accent-gold); }
+.copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; }
+
+/* Floating Buttons */
+.floating-contact {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+}
+.float-btn {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white); font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.zalo-btn { background: #0068ff; }
+.call-btn { background: #d32f2f; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-menu { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; width: 100%; background: var(--dark-blue); padding: 20px; }
+    .nav-menu.active { display: flex; }
+    .hero-content h1 { font-size: 2.5rem; }
+}
