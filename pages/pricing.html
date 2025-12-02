@@ -6,78 +6,197 @@
     <title>Pricing | Tranova Warehouse</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>.lang-vi { display: none; }</style>
 </head>
 <body>
     <header></header>
 
     <section class="page-header">
         <div class="container">
-            <h1>Our Pricing</h1>
-            <p>Flexible solutions for startups and enterprises</p>
+            <h1 class="lang-en">Services & Price List</h1><h1 class="lang-vi">Bảng Giá Dịch Vụ</h1>
+            <p class="lang-en">Transparent costs for warehousing & logistics</p><p class="lang-vi">Chi phí minh bạch cho kho bãi & logistics</p>
         </div>
     </section>
 
-    <section class="section-padding">
+    <section class="section-padding" style="background-color: #f4f6f8;">
         <div class="container">
-            <div class="pricing-tabs">
-                <button class="tab-btn active" onclick="openTab('storage')">Warehousing</button>
-                <button class="tab-btn" onclick="openTab('fulfillment')">Fulfillment</button>
-                <button class="tab-btn" onclick="openTab('transport')">Transportation</button>
-            </div>
-
-            <!-- TAB 1: STORAGE -->
-            <div id="storage" class="pricing-section active">
-                <div class="pricing-grid">
-                    <div class="price-card">
-                        <h3>General Storage</h3>
-                        <div class="price">$6.5 <span>/ m³ / month</span></div>
-                        <p class="text-gray">(~160,000 VND)</p>
-                        <ul class="features-list">
-                            <li><i class="fas fa-check-circle"></i> Standard Racking</li>
-                            <li><i class="fas fa-check-circle"></i> 24/7 Security</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Get Quote</a>
-                    </div>
-                    <div class="price-card featured">
-                        <div class="badge-popular" style="position: absolute; top: 15px; right: -30px; background: var(--accent-gold); padding: 5px 30px; transform: rotate(45deg); font-size: 0.8rem; font-weight: bold;">POPULAR</div>
-                        <h3>Cool Storage</h3>
-                        <div class="price">$12.0 <span>/ m³ / month</span></div>
-                        <p class="text-gray">(~300,000 VND)</p>
-                        <ul class="features-list">
-                            <li><i class="fas fa-check-circle"></i> Temp: 18°C - 25°C</li>
-                            <li><i class="fas fa-check-circle"></i> Humidity Control</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Get Quote</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 2: FULFILLMENT -->
-            <div id="fulfillment" class="pricing-section">
-                <div class="pricing-grid">
-                    <div class="price-card">
-                        <h3>Standard Order</h3>
-                        <div class="price">$0.25 <span>/ order</span></div>
-                        <p class="text-gray">(~6,000 VND)</p>
-                        <ul class="features-list">
-                            <li><i class="fas fa-check-circle"></i> Pick & Pack</li>
-                            <li><i class="fas fa-check-circle"></i> Labeling</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Get Quote</a>
-                    </div>
-                </div>
-            </div>
             
-            <!-- TAB 3: TRANSPORT -->
-            <div id="transport" class="pricing-section">
-                <div class="text-center">
-                    <h3>Da Nang Inner City</h3>
-                    <p>Van 500kg: From <strong>150,000 VND</strong> / trip</p>
-                    <p>Truck 1.25 Ton: From <strong>250,000 VND</strong> / trip</p>
-                    <br>
-                    <a href="contact.html" class="btn">Contact for details</a>
+            <!-- TABS -->
+            <div class="pricing-tabs">
+                <button class="tab-btn active" onclick="openTab('storage')"><span class="lang-en">Warehousing</span><span class="lang-vi">Kho Bãi</span></button>
+                <button class="tab-btn" onclick="openTab('fulfillment')"><span class="lang-en">Fulfillment</span><span class="lang-vi">Xử Lý Đơn</span></button>
+                <button class="tab-btn" onclick="openTab('transport')"><span class="lang-en">Transport</span><span class="lang-vi">Vận Tải</span></button>
+            </div>
+
+            <!-- TAB 1: STORAGE (KHO BÃI) -->
+            <div id="storage" class="pricing-section active">
+                <!-- General Storage -->
+                <div class="service-block">
+                    <h2 class="lang-en">1. General Storage</h2><h2 class="lang-vi">1. Kho Chung</h2>
+                    <div class="service-content">
+                        <div class="service-text">
+                            <p class="lang-en">Standard storage for dry goods, furniture, and FMCG.</p>
+                            <p class="lang-vi">Lưu trữ tiêu chuẩn cho hàng khô, nội thất và hàng tiêu dùng nhanh.</p>
+                        </div>
+                        <div class="service-table-wrap">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th class="lang-en">Unit</th><th class="lang-vi">Đơn Vị</th>
+                                        <th class="lang-en">Price</th><th class="lang-vi">Giá</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>m³ / <span class="lang-en">Month</span><span class="lang-vi">Tháng</span></td>
+                                        <td class="price-highlight">150,000 VND</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pallet / <span class="lang-en">Month</span><span class="lang-vi">Tháng</span></td>
+                                        <td class="price-highlight">180,000 VND</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cool Storage -->
+                <div class="service-block">
+                    <h2 class="lang-en">2. Cool Storage (18-25°C)</h2><h2 class="lang-vi">2. Kho Mát (18-25°C)</h2>
+                    <div class="service-content">
+                        <div class="service-text">
+                            <p class="lang-en">For cosmetics, pharma, and food supplements.</p>
+                            <p class="lang-vi">Dành cho mỹ phẩm, dược phẩm và thực phẩm chức năng.</p>
+                        </div>
+                        <div class="service-table-wrap">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th class="lang-en">Unit</th><th class="lang-vi">Đơn Vị</th>
+                                        <th class="lang-en">Price</th><th class="lang-vi">Giá</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>m³ / <span class="lang-en">Month</span><span class="lang-vi">Tháng</span></td>
+                                        <td class="price-highlight">300,000 VND</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Storage (MỚI THÊM) -->
+                <div class="service-block">
+                    <h2 class="lang-en">3. Document Storage</h2><h2 class="lang-vi">3. Lưu Trữ Hồ Sơ</h2>
+                    <div class="service-content">
+                        <div class="service-text">
+                            <p class="lang-en">Secure archiving for business records.</p>
+                            <p class="lang-vi">Lưu trữ hồ sơ doanh nghiệp bảo mật.</p>
+                        </div>
+                        <div class="service-table-wrap">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th class="lang-en">Item</th><th class="lang-vi">Hạng mục</th>
+                                        <th class="lang-en">Price</th><th class="lang-vi">Giá</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="lang-en">Standard Box</span><span class="lang-vi">Thùng Tiêu Chuẩn</span></td>
+                                        <td class="price-highlight">12,000 VND / <span class="lang-en">Month</span><span class="lang-vi">Tháng</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="lang-en">Retrieval Fee</span><span class="lang-vi">Phí Truy Xuất</span></td>
+                                        <td class="price-highlight">15,000 VND / <span class="lang-en">File</span><span class="lang-vi">Hồ Sơ</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- TAB 2: FULFILLMENT (MỚI THÊM CHI TIẾT) -->
+            <div id="fulfillment" class="pricing-section">
+                <div class="service-block">
+                    <h2 class="lang-en">E-commerce Fulfillment</h2><h2 class="lang-vi">Hoàn Tất Đơn Hàng TMĐT</h2>
+                    <div class="service-content">
+                        <div class="service-text">
+                            <p class="lang-en">Complete solution: Storage, Pick & Pack, and Handover to carriers.</p>
+                            <p class="lang-vi">Giải pháp toàn diện: Lưu kho, Lấy hàng & Đóng gói, Bàn giao vận chuyển.</p>
+                        </div>
+                        <div class="service-table-wrap">
+                            <table class="price-table">
+                                <thead>
+                                    <tr>
+                                        <th class="lang-en">Service</th><th class="lang-vi">Dịch Vụ</th>
+                                        <th class="lang-en">Price (Start form)</th><th class="lang-vi">Giá (Từ)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="lang-en">Order Processing</span><span class="lang-vi">Xử Lý Đơn Hàng</span></td>
+                                        <td class="price-highlight">5,000 VND / <span class="lang-en">Order</span><span class="lang-vi">Đơn</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="lang-en">Standard Packing</span><span class="lang-vi">Đóng Gói Tiêu Chuẩn</span></td>
+                                        <td class="price-highlight">3,000 VND / <span class="lang-en">Unit</span><span class="lang-vi">Cái</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="lang-en">Labeling</span><span class="lang-vi">Dán Tem/Nhãn</span></td>
+                                        <td class="price-highlight">500 VND / <span class="lang-en">Label</span><span class="lang-vi">Tem</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p style="font-size: 0.8rem; margin-top: 10px; font-style: italic;">* <span class="lang-en">Packing materials (box, bubble wrap) quoted separately.</span><span class="lang-vi">Vật tư đóng gói (hộp, xốp nổ) báo giá riêng.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: TRANSPORT (MỚI THÊM CHI TIẾT) -->
+            <div id="transport" class="pricing-section">
+                <div class="service-block">
+                    <h2 class="lang-en">Last-Mile Delivery (Da Nang)</h2><h2 class="lang-vi">Giao Hàng Nội Thành Đà Nẵng</h2>
+                    <div class="service-table-wrap" style="flex: 100%;">
+                        <table class="price-table">
+                            <thead>
+                                <tr>
+                                    <th class="lang-en">Vehicle</th><th class="lang-vi">Phương Tiện</th>
+                                    <th class="lang-en">Load</th><th class="lang-vi">Tải Trọng</th>
+                                    <th class="lang-en">Starting Price (4km)</th><th class="lang-vi">Giá Mở Cửa (4km)</th>
+                                    <th class="lang-en">Next km</th><th class="lang-vi">km Tiếp Theo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="lang-en">Van / Mini Truck</span><span class="lang-vi">Xe Van / Ba Gác</span></td>
+                                    <td>500 kg</td>
+                                    <td class="price-highlight">150,000 VND</td>
+                                    <td>14,000 VND</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="lang-en">Light Truck</span><span class="lang-vi">Xe Tải Nhỏ</span></td>
+                                    <td>1.25 <span class="lang-en">Ton</span><span class="lang-vi">Tấn</span></td>
+                                    <td class="price-highlight">250,000 VND</td>
+                                    <td>18,000 VND</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="lang-en">Medium Truck</span><span class="lang-vi">Xe Tải Trung</span></td>
+                                    <td>2.4 <span class="lang-en">Ton</span><span class="lang-vi">Tấn</span></td>
+                                    <td class="price-highlight">350,000 VND</td>
+                                    <td>22,000 VND</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -87,11 +206,13 @@
         function openTab(tabName) {
             var i;
             var x = document.getElementsByClassName("pricing-section");
-            for (i = 0; i < x.length; i++) { x[i].style.display = "none"; }
-            document.getElementById(tabName).style.display = "block";
+            for (i = 0; i < x.length; i++) { x[i].style.display = "none"; x[i].classList.remove('active');}
             
             var tabs = document.getElementsByClassName("tab-btn");
             for (i = 0; i < tabs.length; i++) { tabs[i].classList.remove("active"); }
+            
+            document.getElementById(tabName).style.display = "block";
+            setTimeout(() => { document.getElementById(tabName).classList.add('active'); }, 10);
             event.currentTarget.classList.add("active");
         }
     </script>
