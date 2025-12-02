@@ -6,7 +6,10 @@
     <title>Tranova Warehouse | Logistics Da Nang</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>.lang-vi { display: none; }</style>
+    <style>
+        /* Mặc định ẩn tiếng Việt để tránh bị nháy chữ khi tải trang */
+        .lang-vi { display: none; }
+    </style>
 </head>
 <body>
     <header></header> <!-- Tự động nạp bởi JS -->
@@ -90,7 +93,7 @@
         </div>
     </section>
 
-    <!-- CALL TO ACTION (Mới thêm cho đẹp) -->
+    <!-- CALL TO ACTION -->
     <section class="section-padding" style="background-color: #f9f9f9; text-align: center;">
         <div class="container">
             <h2 class="lang-en mb-3">Ready to scale your business?</h2>
@@ -107,6 +110,33 @@
     </section>
 
     <footer></footer> <!-- Tự động nạp bởi JS -->
+    
+    <!-- Script chính -->
     <script src="./js/main.js"></script>
+    
+    <!-- Script bổ sung: Đảm bảo chuyển đổi ngôn ngữ hoạt động ngay lập tức -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lấy ngôn ngữ hiện tại từ bộ nhớ, mặc định là tiếng Anh
+            const currentLang = localStorage.getItem('lang') || 'en';
+            
+            const enElements = document.querySelectorAll('.lang-en');
+            const viElements = document.querySelectorAll('.lang-vi');
+            
+            // Hàm ẩn/hiện theo ngôn ngữ
+            if (currentLang === 'en') {
+                enElements.forEach(el => el.style.display = 'block');
+                viElements.forEach(el => el.style.display = 'none');
+            } else {
+                enElements.forEach(el => el.style.display = 'none');
+                viElements.forEach(el => el.style.display = 'block');
+            }
+            
+            // Xử lý riêng cho các thẻ span trong nút bấm (để tránh vỡ giao diện nút)
+            document.querySelectorAll('.btn span').forEach(el => {
+                if(el.style.display === 'block') el.style.display = 'inline-block';
+            });
+        });
+    </script>
 </body>
 </html>
